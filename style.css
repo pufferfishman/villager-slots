@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&display=swap');
+
+body {
+    background-color: #191a24;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+* {
+    font-family: "Noto Color Emoji", sans-serif;
+}
+
+#button {
+    background-color: #505271;
+    border: solid rgb(150, 146, 203) 15px;
+    border-radius: 10px;
+    padding: 25px;
+    font-size: 75px;
+    margin-top: -50px;
+    transition: transform 0.2s ease;
+}
+
+#button:disabled {
+    background-color: #2b2d3d;
+    border: solid rgb(97, 95, 132) 15px;
+}
+
+#slotsContainer {
+    display: grid;
+    margin: 100px;
+    grid-template-columns: repeat(5, 150px);
+    grid-template-rows: repeat(3, 150px);
+    border: solid #38384c 15px;
+}
+
+.slot {
+    font-size: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: default;
+    user-select: none;
+}
+
+#button:hover {
+    transform: scale(1.05);
+}
+
+#button:active {
+    transform: scale(1.1);
+}
+
+
+@keyframes popIn {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
